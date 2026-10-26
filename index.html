@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f7fb" />
+  <title>Reading List | Shreyansh Tiwari</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="profile">
+      <div class="brand-mark" aria-hidden="true">RL</div>
+      <div class="profile-copy">
+        <p class="eyebrow">STUDENT READING SPACE</p>
+        <h1>My Reading List</h1>
+        <p class="subtitle">A simple place to keep track of what you want to read.</p>
+      </div>
+    </header>
+
+    <section class="student-card" aria-label="Student details">
+      <div class="avatar" aria-hidden="true">ST</div>
+      <div class="student-info">
+        <h2>Shreyansh Tiwari</h2>
+        <p>B.Tech · JECRC University, Jaipur, India</p>
+      </div>
+      <div class="graduation">
+        <span>PASSING YEAR</span>
+        <strong>2029</strong>
+      </div>
+    </section>
+
+    <section class="add-section panel" aria-labelledby="add-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">BUILD YOUR LIST</p>
+          <h2 id="add-heading">Add a book</h2>
+        </div>
+      </div>
+      <form id="book-form">
+        <div class="field title-field">
+          <label for="book-title">Book title</label>
+          <input id="book-title" name="title" type="text" placeholder="e.g. Atomic Habits" maxlength="120" required />
+        </div>
+        <div class="field status-field">
+          <label for="book-status">Reading status</label>
+          <select id="book-status" name="status">
+            <option value="Want to Read">Want to Read</option>
+            <option value="Reading">Reading</option>
+            <option value="Finished">Finished</option>
+          </select>
+        </div>
+        <button class="add-button" type="submit"><span aria-hidden="true">＋</span> Add book</button>
+      </form>
+    </section>
+
+    <section class="list-section" aria-labelledby="list-heading">
+      <div class="list-toolbar">
+        <div>
+          <p class="eyebrow">YOUR COLLECTION</p>
+          <h2 id="list-heading">Books <span id="book-count" class="count">0</span></h2>
+        </div>
+        <div class="filter-field">
+          <label for="status-filter">Filter</label>
+          <select id="status-filter">
+            <option value="All">All books</option>
+            <option value="Want to Read">Want to Read</option>
+            <option value="Reading">Reading</option>
+            <option value="Finished">Finished</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="book-list" class="book-grid" aria-live="polite"></div>
+      <p id="empty-state" class="empty-state">
+        <span class="empty-icon" aria-hidden="true">▤</span>
+        <strong>Your reading list is empty. Add your first book.</strong>
+        <span>Your books will appear here once you add them.</span>
+      </p>
+      <p class="storage-note"><span aria-hidden="true">🔒</span> Your list is saved locally in this browser.</p>
+    </section>
+
+    <footer>Made for focused reading <span aria-hidden="true">·</span> Shreyansh Tiwari</footer>
+  </main>
+</body>
+</html>
